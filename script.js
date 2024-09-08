@@ -16,14 +16,13 @@ const makeGrid = (num) => {
 givenSizeBtn.addEventListener("click", () => {
   let num = prompt("give a number less then 100 for size of grid squares");
   const giveNum = parseInt(num);
-  console.log(giveNum);
+  root.innerHTML = "";
+
   makeGrid(giveNum);
 });
 
-// in case don't provide size of box
-if (!givenSizeBtn.clicked) {
-  makeGrid(16);
-}
+//in case don't provide size of box
+!givenSizeBtn.clicked && makeGrid(16);
 
 //hover effect with events
 root.addEventListener("mouseout", (e) => {
